@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --color-btn1: #602749;
+    --color-btn2: #ED9D1F;
+    --color1: #964200;
+    --color2: #280f0a;
+    --color3:#111111;
+    --color4: #e3dcda;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-container img{
+    width: 400px;
+    margin: 20px 0 20px 0;
+}
+
+.form-container input[type=email],[type=password]{
+    width: 550px;
+    height: 58px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 22px;
+    border: none;
+    box-shadow: 2px 2px 4px #000000;
+}
+
+.form-container .btn{
+    width: 550px;
+    height: 58px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    background-color: var(--color-btn1);
+    border-radius: 10px;
+    color: var(--color4);
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 2px 2px 4px #000000;
+}
+
+#btn2{
+    width: 550px;
+    height: 58px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    background-color: var(--color-btn2);
+    border-radius: 10px;
+    color: var(--color4);
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 2px 2px 4px #000000;
+}
