@@ -24,6 +24,12 @@ html{
 
 }
 
+section{
+    padding:2rem;
+    max-width: 1440px;
+    margin:0 auto;
+ }
+
 .message{
     position: sticky;
     top: 0;
@@ -43,6 +49,14 @@ html{
     font-size: 2rem;
 }
 
+.heading{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
 
 .form-container{
     display: flex;
@@ -75,27 +89,147 @@ html{
     box-shadow: 2px 2px 4px #000000;
 }
 
-.form-container .btn{
-    width: 550px;
-    height: 58px;
-    margin-top: 20px;
-    text-transform: uppercase;
-    background-color: var(--color-btn1);
-    border-radius: 10px;
-    color: var(--color4);
-    font-size: 25px;
-    cursor: pointer;
-    border: none;
-    box-shadow: 2px 2px 4px #000000;
-    transition: 0.4s;
+.btn,.delete-btn,
+.option-btn{
+    display: block;
+   width: 100%;
+   margin-top: 1rem;
+   border-radius: .5rem;
+   padding:1rem 3rem;
+   font-size: 1.7rem;
+   text-transform: capitalize;
+   color:var(--color4);
+   cursor: pointer;
+   text-align: center;
 }
 
-.btn:hover{
+
+.btn:hover,.delete-btn:hover,
+.option-btn:hover{
     background-color: var(--color2);
     transition: 0.4s;
 }
 
+.btn{
+    background-color: var(--color-btn1);
+ }
+ 
+ .option-btn{
+    background-color: var(--color-btn2);
+ }
+ 
+ .delete-btn{
+    background-color: var(--color1);
+ }
+ 
+ .flex-btn{
+    display: flex;
+    gap:1rem;
+ }
 
+ .header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    z-index: 1000;
+ }
+
+ .header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+ }
+
+ .header .flex .logo{
+    font-size: 1.5rem;
+    color: var(--color-btn1);
+ }
+
+ .header .flex .logo span{
+    color: var(--color-btn2);
+ }
+
+ .header .flex .navbar a{
+    margin: 0 1rem;
+    font-size: 1rem;
+    color: var(--color3);
+ }
+
+ .header .flex .icons div{
+    margin-left: 1.7rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color:var(--color3);
+ }
+ 
+ .header .flex .icons div:hover{
+    color:var(--color1);
+ }
+
+ .header .flex .profile{
+    position: absolute;
+    top: 125%;
+    right: 2rem;
+    background-color: var(--color4);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    padding: 2rem;
+    display: none;
+    animation: fade .2s linear;
+    border-radius: 10px;
+    border: 1px solid #9e9595;
+ }
+
+ .header .flex .profile p{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+ }
+
+ .header .flex .profile.active{
+    display: inline-block;
+}
+
+#menu-btn{
+    display: none;
+}
+
+.dashboard .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.dashboard .box-container .box{
+    text-align: center;
+    background-color: var(--color4);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: 0.5rem;    
+    padding: 1rem;
+}
+
+.dashboard .box-container .box h3{
+    font-size: 2rem;
+}
+
+.dashboard .box-container .box p{
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color: #9e9595;
+}
+
+
+
+@keyframes fade{
+    0%{
+        transform: translateY(1rem);
+    }
+}
 
 @media (max-width:991px){
     html{
@@ -118,6 +252,39 @@ html{
     }
 }
 
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .flex .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        border-top: #000000;
+        border-bottom: #000000;
+        background-color: var(--color4);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: 0.2s linear;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    }
+
+    .header .flex .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .flex .navbar a{
+        display: block;
+        margin: 2rem;
+    }
+
+    
+
+}
+
 @media (max-width:450px){
     html{
         font-size: 65%;
@@ -138,4 +305,13 @@ html{
         height: 40px;
         font-size: 17px;
     }
+
+    .flex-btn{
+        flex-flow: column;
+        gap:0;
+     }
+
+     .heading{
+        font-size: 2rem;
+     }
 }
