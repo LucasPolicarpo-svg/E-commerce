@@ -16,11 +16,11 @@
 
         <nav class="navbar">
             <a href="dashboard.php">Home</a>
-            <a href="produtos.php">Produtos</a>
+            <a href="products.php">Produtos</a>
             <a href="pedidos_feitos.php">Pedidos</a>
             <a href="admin_contas.php">Administradores</a>
             <a href="contas_usuarios.php">Usuários</a>
-            <a href="mensagens.php">Mensagens</a>
+            <a href="messages.php">Mensagens</a>
         </nav>
 
         <div class="icons">
