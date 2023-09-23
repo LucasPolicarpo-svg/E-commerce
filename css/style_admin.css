@@ -307,7 +307,61 @@ section{
     font-size: 1.5rem;
 }
 
+.update-product form{
+    margin: 0 auto;
+    max-width: 40rem;
+    background-color: var(--color4);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    padding: 2rem;
+}
 
+.update-product form .image-container .main-image img{
+    height: 20rem;
+    width: 100%;
+    object-fit: contain;
+}
+
+.update-product form .image-container .sub-images{
+    display: flex;
+    gap: 1rem;
+    margin: 0.8rem 0;
+    justify-content: center;
+}
+
+.update-product form .image-container .sub-images img{
+    height: 7rem;
+    width: 8rem;
+    object-fit: contain;
+    cursor: pointer;
+    padding: 0.3rem;
+    border: 1px solid #111111;
+    border-radius: 0.5rem;
+    transition: 0.2s linear;
+}
+
+.update-product form .image-container .sub-images img:hover{
+    transform: scale(1.1);
+    transition: 0.2s linear;
+}
+
+.update-product form .box{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    margin: 1rem 0;
+}
+
+.update-product form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+.update-product form span{
+    font-size: 1.7rem;
+    
+}
 
 
 

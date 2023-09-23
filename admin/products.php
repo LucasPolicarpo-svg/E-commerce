@@ -140,6 +140,7 @@ if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
 
         <!--Seção que visualiza os produtos-->
         <section class="show-products">
+            <h1 class="heading">Produtos adicionados</h1>
             <div class="box-container">
             <?php
             $show_products = $conn->prepare("SELECT * FROM `produtos`");
